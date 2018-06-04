@@ -21,6 +21,6 @@ public class demoApplication {
 	@RequestMapping("/index")
 	public String Stater(){
 		
-		return "是否可以";
+		return "不可以";
 	}
 }
