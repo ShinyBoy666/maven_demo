@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController  // @RestController = @Controller + @ResponseBody
 @SpringBootApplication //Spring Boot核心注解，用于开启自动配置
 public class demoApplication {
 
@@ -18,9 +18,9 @@ public class demoApplication {
 		SpringApplication.run(demoApplication.class, args);
 	}
 	
-	@RequestMapping("/index")
+	@RequestMapping("/start")
 	public String Stater(){
-		
 		return "开始";
 	}
+	
 }
