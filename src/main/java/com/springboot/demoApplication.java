@@ -17,4 +17,10 @@ public class demoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(demoApplication.class, args);
 	}
+	
+	@RequestMapping("/index")
+	public String Stater(){
+		
+		return " ";
+	}
 }
