@@ -21,6 +21,6 @@ public class demoApplication {
 	@RequestMapping("/index")
 	public String Stater(){
 		
-		return " ";
+		return "傻逼";
 	}
 }
