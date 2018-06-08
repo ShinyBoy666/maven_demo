@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    	<!--beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <!-- 该配置会使生产的Mapper自动继承MyMapper -->
+            <property name="mappers" value="com.springboot.common.config.MyMapper" />
+            <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+            <property name="caseSensitive" value="false"/>
+        </plugin>
+        <!-- 数据库链接地址账号密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/leecx"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <!-- 生成Model类存放位置 -->
+        <javaModelGenerator targetPackage="com.springboot.pojo" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true"/>
+	        <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+		<!-- 对于生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+        	<property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+		<!-- 生成Dao类存放位置 -->
+        <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件的代码
+            type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+            type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口 -->
+        <javaClientGenerator targetPackage="com.springboot.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER">
+        	<property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+		<!-- 配置需要生成的表 -->
+		<table tableName="sys_user" domainObjectName="JobLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+    </context>
+</generatorConfiguration>
