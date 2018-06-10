@@ -1,4 +1,4 @@
-package com.springboot.common.pojo;
+package com.springboot.common.result;
 
 import java.util.List;
 
