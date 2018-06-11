@@ -23,7 +23,7 @@
         </jdbcConnection>
 
         <!-- 生成Model类存放位置 -->
-        <javaModelGenerator targetPackage="com.springboot.pojo" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.springboot.common.pojo" targetProject="src/main/java">
 			<property name="enableSubPackages" value="true"/>
 	        <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -36,7 +36,7 @@
         <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件的代码
             type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
             type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口 -->
-        <javaClientGenerator targetPackage="com.springboot.mapper" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.springboot.common.mapper" targetProject="src/main/java"
                              type="XMLMAPPER">
         	<property name="enableSubPackages" value="true"/>
         </javaClientGenerator>

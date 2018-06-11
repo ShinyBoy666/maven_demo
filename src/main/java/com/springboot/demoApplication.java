@@ -20,7 +20,7 @@ public class demoApplication {
 	
 	@RequestMapping("/start")
 	public String Stater(){
-		return "开始";
+		return "开始测试";
 	}
 	
 }
