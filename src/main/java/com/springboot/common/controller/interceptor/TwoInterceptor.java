@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.springboot.common.result.IMoocJSONResult;
 import com.springboot.common.util.JsonUtils;
+import com.springboot.common.util.result.IMoocJSONResult;
 
 public class TwoInterceptor implements HandlerInterceptor {
 

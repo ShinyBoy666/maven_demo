@@ -1,4 +1,4 @@
-package com.springboot.common.result;
+package com.springboot.common.util.result;
 
 import java.util.List;
 

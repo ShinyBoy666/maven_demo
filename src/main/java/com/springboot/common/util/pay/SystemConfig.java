@@ -1,4 +1,4 @@
-package com.springboot.common.pay;
+package com.springboot.common.util.pay;
 
 public class SystemConfig {
 	

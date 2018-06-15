@@ -1,4 +1,4 @@
-package com.springboot.common.pay;
+package com.springboot.common.util.pay;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;

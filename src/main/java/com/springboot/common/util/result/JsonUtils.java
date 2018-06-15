@@ -1,4 +1,4 @@
-package com.springboot.common.result;
+package com.springboot.common.util.result;
 
 /**
  * @Description:200：表示成功

@@ -1,4 +1,4 @@
-package com.springboot.common.pay;
+package com.springboot.common.util.pay;
 
 /**
  * 微信支付各种配置数据

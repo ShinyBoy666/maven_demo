@@ -1,4 +1,4 @@
-package com.springboot.common.result;
+package com.springboot.common.util.result;
 
 /**
  * 结果状态-枚举类

@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.springboot.common.result.IMoocJSONResult;
+import com.springboot.common.util.result.IMoocJSONResult;
+
 
 @ControllerAdvice
 public class IMoocExceptionHandler {
