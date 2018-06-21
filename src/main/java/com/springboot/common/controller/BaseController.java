@@ -8,10 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 
 import com.springboot.common.util.DateUtil;
+import com.springboot.common.util.ShiroUtils;
+import com.springboot.system.pojo.UserDO;
 
 /**
  * 基础-控制类
@@ -19,6 +22,7 @@ import com.springboot.common.util.DateUtil;
  * @author 
  *
  */
+@Controller
 public class BaseController {
 	
 	private static final String[] HEADERS_TO_TRY = {
@@ -69,4 +73,16 @@ public class BaseController {
 		return ip;
 	}
 
+	public UserDO getUser() {
+		return ShiroUtils.getUser();
+	}
+
+	public Long getUserId() {
+		return getUser().getUserId();
+	}
+
+	public String getUsername() {
+		return getUser().getUsername();
+	}
+	
 }
